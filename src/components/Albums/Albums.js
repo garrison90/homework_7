@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Switch, Route, useRouteMatch, Redirect } from "react-router-dom";
+import { Switch, Route, useRouteMatch } from "react-router-dom";
 import AlbumsPhotos from "./AlbumsPhotos";
 import AlbumsList from "./AlbumsList";
 import Paper from "@material-ui/core/Paper";
@@ -38,9 +38,6 @@ function Albums({ users, albums, getAlbums, getUsers }) {
               return <AlbumsPhotos albumId={route.match.params.id} />;
             }}
           />
-          <Route path={`${path}/*`}>
-            <Redirect to={`${path}`} />
-          </Route>
         </Switch>
       )}
     </Paper>

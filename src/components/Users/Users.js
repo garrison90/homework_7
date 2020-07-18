@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Switch, Route, useRouteMatch, Redirect } from "react-router-dom";
+import { Switch, Route, useRouteMatch } from "react-router-dom";
 import UsersList from "./UsersList";
 import UserForm from "./UserForm";
 import Paper from "@material-ui/core/Paper";
@@ -32,9 +32,6 @@ function Users({ getUsers, users }) {
               return <UserForm id={route.match.params.id} />;
             }}
           />
-          <Route path={`${path}/*`}>
-            <Redirect to={`${path}`} />
-          </Route>
         </Switch>
       )}
     </Paper>
