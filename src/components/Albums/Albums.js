@@ -39,7 +39,7 @@ function Albums({ users, albums, getAlbums, getUsers }) {
             }}
           />
           <Route path={`${path}/*`}>
-            <Redirect to={`${path} `} />
+            <Redirect to={`${path}`} />
           </Route>
         </Switch>
       )}

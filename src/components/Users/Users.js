@@ -5,7 +5,7 @@ import UserForm from "./UserForm";
 import Paper from "@material-ui/core/Paper";
 import { connect } from "react-redux";
 import { getUsers } from "../../store/actions/users";
-import { CircularProgress } from "@material-ui/core";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 function Users({ getUsers, users }) {
   useEffect(() => {

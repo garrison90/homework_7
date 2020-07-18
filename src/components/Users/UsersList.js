@@ -34,8 +34,8 @@ function UsersList({ users }) {
       </TableContainer>
       <Button
         variant="contained"
-        color="primary"
-        size="medium"
+        color="inherit"
+        fullWidth
         component={Link}
         to={`${url}/new`}
       >
