@@ -11,11 +11,8 @@ import { getUsers } from "../../store/actions/users";
 function Albums({ users, albums, getAlbums, getUsers }) {
   useEffect(() => {
     getUsers();
-  }, [getUsers]);
-
-  useEffect(() => {
-    getAlbums();
-  }, [getAlbums]);
+    setTimeout(getAlbums, 500);
+  }, [getUsers, getAlbums]);
 
   const { path } = useRouteMatch();
 
